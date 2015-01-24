@@ -1,0 +1,7 @@
+*.pyc
+*.egg-info
+build
+dist
+vagrant/.vagrant
+vagrant/boxes
+vagrant/metadata.json
