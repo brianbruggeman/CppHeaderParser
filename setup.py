@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys, glob
-from distutils.core import setup
+import sys
+import glob
+from setuptools import setup
 
 DESCRIPTION = (
     'Parse C++ header files and generate a data structure '
     'representing the class'
-    )
+)
 
 
 CLASSIFIERS = [
@@ -23,21 +24,22 @@ CLASSIFIERS = [
     'Topic :: Software Development :: Code Generators',
     'Topic :: Software Development :: Compilers',
     'Topic :: Software Development :: Disassemblers'
-    ]
+]
 
 setup(
-    name = 'CppHeaderParser',
-    version = '2.4.4',
-    author = 'Jashua Cloutier',
-    author_email = 'jashuac@bellsouth.net',
-    url = 'http://senexcanis.com/open-source/cppheaderparser/',
-    description = DESCRIPTION,
-    long_description = open('README.txt').read(),
-    license = 'BSD',
-    platforms = 'Platform Independent',
-    packages = ['CppHeaderParser'],
-    keywords = 'c++ header parser ply',
-    classifiers = CLASSIFIERS,
-    requires = ['ply'],
-    package_data = { 'CppHeaderParser': ['README', 'README.html', 'doc/*.*', 'examples/*.*'], },
-    )
+    name='CppHeaderParser',
+    version='2.4.4',
+    author='Jashua Cloutier',
+    author_email='jashuac@bellsouth.net',
+    url='http://senexcanis.com/open-source/cppheaderparser/',
+    description=DESCRIPTION,
+    long_description=open('README.md').read(),
+    license='BSD',
+    platforms='Platform Independent',
+    packages=['CppHeaderParser'],
+    keywords='c++ header parser ply',
+    classifiers=CLASSIFIERS,
+    requires=['ply'],
+    package_data={
+        'CppHeaderParser': ['README', 'README.html', 'doc/*.*', 'examples/*.*'], },
+)
